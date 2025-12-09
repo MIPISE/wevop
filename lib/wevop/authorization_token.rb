@@ -9,7 +9,7 @@ module Wevop
           @@storage ||= StaticStorage.new
         end
 
-        def storage= (storage)
+        def storage=(storage)
           @@storage = storage
         end
 
