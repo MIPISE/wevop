@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "openssl"
   spec.add_development_dependency "dotenv"
+  spec.add_development_dependency "standard"
+  spec.add_development_dependency "rubocop"
   spec.add_development_dependency "minitest"
   spec.add_development_dependency "minitest-reporters"
   spec.add_development_dependency "rake"

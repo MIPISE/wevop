@@ -7,7 +7,7 @@ module Wevop
     extend Helpers
 
     def configuration
-      @configuration ||= ::OpenStruct.new(:http_timeout => 10000)
+      @configuration ||= ::OpenStruct.new(http_timeout: 10000)
     end
 
     def configure
