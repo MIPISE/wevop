@@ -1,0 +1,4 @@
+WEVOP_URL_API=https://wevop.test
+WEVOP_API_KEY=SOMEAPIKEY
+WEVOP_CLIENT_ID=SOMECLIENTID
+WEVOP_AUTHORIZATION_URL=https://wevop.test/vop-authentication
