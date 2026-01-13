@@ -4,26 +4,30 @@ require_relative "../test_helper"
 
 describe "Helpers" do
   describe "#generate_uri" do
-    let(:wevop_class) { Wevop::V1::Accounts }
+    let(:wevop_accounts_class) { Wevop::V1::Accounts }
+    let(:wevop_verification_class) { Wevop::V1::Verification }
 
     it "render URI based on Class name" do
-      assert_equal "v1/accounts", wevop_class.generate_uri
+      assert_equal "v1/accounts", wevop_accounts_class.generate_uri
+      assert_equal "v1/verification", wevop_verification_class.generate_uri
     end
 
     it "render URI based on Class name with 1 option" do
-      assert_equal "v1/accounts?test=test", wevop_class.generate_uri({test: "test"})
+      assert_equal "v1/accounts?test=test", wevop_accounts_class.generate_uri({test: "test"})
+      assert_equal "v1/verification?test=test", wevop_verification_class.generate_uri({test: "test"})
     end
 
     it "render URI based on Class name with 2 options" do
-      assert_equal "v1/accounts?test=test&test2=test2", wevop_class.generate_uri({test: "test", test2: "test2"})
+      assert_equal "v1/accounts?test=test&test2=test2", wevop_accounts_class.generate_uri({test: "test", test2: "test2"})
+      assert_equal "v1/verification?test=test&test2=test2", wevop_verification_class.generate_uri({test: "test", test2: "test2"})
     end
 
     it "render URI based on Class name with post option and options" do
-      assert_equal "v1/accounts/disable?test=test&test2=test2", wevop_class.generate_uri({test: "test", test2: "test2"}, "disable")
+      assert_equal "v1/accounts/disable?test=test&test2=test2", wevop_accounts_class.generate_uri({test: "test", test2: "test2"}, "disable")
     end
 
     it "render URI based on Class name with post option" do
-      assert_equal "v1/accounts/disable", wevop_class.generate_uri({}, "disable")
+      assert_equal "v1/accounts/disable", wevop_accounts_class.generate_uri({}, "disable")
     end
   end
 
