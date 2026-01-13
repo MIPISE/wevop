@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "securerandom" unless Object.const_defined?("SecureRandom")
 require "time"
 require_relative "wevop/helpers"
 require_relative "wevop/configuration"
